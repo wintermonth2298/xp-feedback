@@ -24,7 +24,7 @@ func (s *Service) CSV(ctx context.Context) ([]byte, error) {
 	records := make([][]string, 0, len(feedbacks))
 
 	for _, f := range feedbacks {
-		record := []string{strconv.Itoa(f.Stars), f.Comment}
+		record := []string{strconv.Itoa(f.UserID), strconv.Itoa(f.Stars), f.Comment}
 		records = append(records, record)
 	}
 

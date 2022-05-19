@@ -14,7 +14,7 @@ type Controller struct {
 func InitRoutes(s *Service, api *gin.RouterGroup) {
 	c := Controller{service: s}
 
-	feedbacks := api.Group("/feedback")
+	feedbacks := api.Group("/feedbacks")
 	{
 		feedbacks.POST("", c.create)
 		feedbacks.GET("/csv", c.csv)
